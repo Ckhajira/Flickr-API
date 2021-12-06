@@ -9,4 +9,19 @@ public class FlickrAPI {
     public FlickrAPI(MainActivity mainActivity){
         this.mainActivity = mainActivity;
     }
+
+    public void fetchInterestingPhotos(){
+        //need a URL for the request
+        String url = constructInterestingPhotoListURL();
+        // Log.e(TAG, "fetchInterestingPhotos: " + url);
+
+        //start the background task to fetch the photos
+        //we have to use a background task
+        //Android will not let you do any network activity
+        //on the main UI thread
+        //define a subclass a AsyncTask
+        //asynchronous means doesn't wait/block
+        FetchInterestingPhotoListAsyncTask asyncTask = new FetchInterestingPhotoListAsyncTask();
+        asyncTask.execute(url);
+    }
 }
