@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity"
+    >
+
+    <ImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgProduct"
+        android:layout_centerHorizontal="true"
+        android:text="Product Name"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/txtProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtProductName"
+        android:text="Product Price"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/txtProductDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProductPrice"
+        android:layout_centerHorizontal="true"
+        android:text="Product Description"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnBuyNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProductDescription"
+        android:text="Buy Now"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        />
+
+</RelativeLayout>
