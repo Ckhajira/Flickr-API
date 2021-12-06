@@ -9,6 +9,7 @@ import butterknife.BindView;
 
 public class ChoiceActivity extends AppCompatActivity {
         @BindView(R.id.marketPlaceBtnView) Button marketPlaceBtn;
+    @BindView(R.id.FlickrBtnView) Button flickrBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
