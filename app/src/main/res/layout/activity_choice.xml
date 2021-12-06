@@ -10,7 +10,7 @@
         android:id="@+id/marketPlaceBtnView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Marketplace"
         android:layout_centerInParent="true"/>
 
 
@@ -18,7 +18,7 @@
         android:id="@+id/FlickrBtnView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Flickr Inspiration"
         android:layout_below="@id/marketPlaceBtnView"
         android:layout_centerHorizontal="true"/>
 
