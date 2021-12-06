@@ -26,12 +26,13 @@ public class ChoiceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        flickrBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(ChoiceActivity.this, InterestingPhotos.class )
-//            }
-//        });
+        flickrBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChoiceActivity.this, InterestingPhotosActivity.class );
+                startActivity(intent);
+            }
+        });
 
     }
 }
