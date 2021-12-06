@@ -24,4 +24,13 @@ public class FlickrAPI {
         FetchInterestingPhotoListAsyncTask asyncTask = new FetchInterestingPhotoListAsyncTask();
         asyncTask.execute(url);
     }
+    public String constructInterestingPhotoListURL(){
+        String url =BASE_URL;
+        url += "?method=flickr.interestingness.getList";
+        url += "&api_key=" + API_KEY;
+        url += "&format=json";
+        url += "&nojsoncallback=1";
+        url += "&extras=date_taken,url_h";
+        return url;
+    }
 }
