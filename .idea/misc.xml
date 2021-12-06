@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/layout/activity_success.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_interesting_photos.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_item_product.xml" value="0.18" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
       </map>
     </option>
   </component>
