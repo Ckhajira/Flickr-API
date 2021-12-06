@@ -8,9 +8,12 @@
         <entry key="app/src/main/res/layout/activity_choice.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_interesting_photos.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_more_info.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_product.xml" value="0.22748815165876776" />
         <entry key="app/src/main/res/layout/activity_success.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_interesting_photos.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_about_us.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_contact_us.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_item_product.xml" value="0.18" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
       </map>

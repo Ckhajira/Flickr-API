@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class SuccessActivity extends AppCompatActivity {
     private TextView txtIntro, txtFormDetails;
+    private Button moreInfoBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +23,18 @@ public class SuccessActivity extends AppCompatActivity {
 
         txtIntro = findViewById(R.id.txtIntro);
         txtFormDetails = findViewById(R.id.txtFormDetails);
+        moreInfoBtn = findViewById(R.id.moreInfoBtn);
 
         txtFormDetails.setText("Hello " + formName + " We will deliver your painting to " + formAddress
         + ". In case of any inconveniences, we will call you on your phone " + formPhone);
 
+        moreInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SuccessActivity.this, MoreInfoActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
