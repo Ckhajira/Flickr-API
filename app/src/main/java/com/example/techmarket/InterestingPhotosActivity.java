@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -46,7 +47,35 @@ public class InterestingPhotosActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        FlickrAPI flickrAPI = new FlickrAPI(this);
+        flickrAPI.fetchInterestingPhotos();
     }
+
+    public void receivedInterestingPhotos(List<InterestingPhoto> interestingPhotoList){
+        this.interestingPhotoList = interestingPhotoList;
+        nextPhoto();
+    }
+    public void nextPhoto(){
+        if(interestingPhotoList != null && interestingPhotoList.size() >0){
+            currPhotoIndex++;
+            currPhotoIndex %= interestingPhotoList.size();
+
+            TextView titleTextView = findViewById(R.id.titleTextView);
+            TextView dateTakenTextView = findViewById(R.id.dateTakenTextView);
+
+            InterestingPhoto interestingPhoto = interestingPhotoList.get(currPhotoIndex);
+            titleTextView.setText(interestingPhoto.getTitle());
+            dateTakenTextView.setText(interestingPhoto.getDateTaken());
+
+            //TODO: come back and add support to fetch the source image
+            //using interestingPhoto.getPhotoURL()
+            FlickrAPI flickrAPI = new FlickrAPI(this);
+            flickrAPI.fetchPhotoBitmap(interestingPhoto.getPhotoURL());
+
+        }
+    }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
