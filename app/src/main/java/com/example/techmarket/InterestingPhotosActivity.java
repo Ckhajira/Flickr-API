@@ -1,5 +1,6 @@
 package com.example.techmarket;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,8 +24,12 @@ import com.example.techmarket.databinding.ActivityInterestingPhotosBinding;
 
 import java.util.List;
 
-public class InterestingPhotosActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
+public class InterestingPhotosActivity extends AppCompatActivity {
+    @BindView(R.id.goHomeBtn)
+    Button goHomeBtn;
     private AppBarConfiguration appBarConfiguration;
     private ActivityInterestingPhotosBinding binding;
 
@@ -37,8 +43,17 @@ public class InterestingPhotosActivity extends AppCompatActivity {
 
         binding = ActivityInterestingPhotosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        ButterKnife.bind(this);
         setSupportActionBar(binding.toolbar);
+
+        goHomeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InterestingPhotosActivity.this, ChoiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override

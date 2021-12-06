@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+
     tools:context=".ContactUsFragment">
 
 
@@ -11,10 +11,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment 2"
+        android:layout_marginTop="200dp"
+        android:text="Want to get in touch with us through our website? We are available to cater to your needs. CLick below to be taken to our website"
         android:textSize="30dp"
-        android:layout_centerInParent = "true"
-        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+
+
+        android:textColor="@color/purple_200"
         />
+
+    <TextView
+        android:id="@+id/ourWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="120dp"
+        android:text="Our Website:"
+        android:textSize="25dp"
+        android:layout_marginTop="410dp"/>
+
+    <Button
+        android:id="@+id/mWebsiteLabelBtn"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ourWebsite"
+        android:layout_centerInParent="true"
+
+        android:layout_marginTop="30dp"
+        android:text="https://pixabay.com/" />
 
 </RelativeLayout>

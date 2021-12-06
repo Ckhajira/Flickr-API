@@ -3,17 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+
     tools:context=".AboutUsFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/leaves"
+        android:scaleType="fitStart"
+
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment 1"
-        android:textSize="30dp"
-        android:layout_centerInParent = "true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="We are a photography and paintings compay that ensure the needs of our customers are met. Established in 1916 by Eli Hills, our studio has seen the World War I, World War II, Cold War and will be here to see World War III. We satisfactorily cater to the needs of our customers "
         android:textColor="@color/black"
-        />
+        android:textSize="30dp" />
 
 </RelativeLayout>

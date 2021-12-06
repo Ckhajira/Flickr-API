@@ -9,27 +9,28 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="600dp"/>
+        android:layout_height="600dp" />
 
     <Button
         android:id="@+id/fragment1btn"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/purple_700"
-        android:text="Fragment 1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginStart="50dp" />
+        android:text="About Us" />
 
     <Button
         android:id="@+id/fragment2btn"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:backgroundTint="@color/black"
-        android:text="Fragment 2"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginStart="50dp" />
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/black"
+        android:text="Contact Us" />
 
 </RelativeLayout>
