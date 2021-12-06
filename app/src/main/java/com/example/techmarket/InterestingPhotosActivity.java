@@ -15,10 +15,16 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.techmarket.databinding.ActivityInterestingPhotosBinding;
 
+import java.util.List;
+
 public class InterestingPhotosActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityInterestingPhotosBinding binding;
+
+    List<InterestingPhoto> interestingPhotoList;
+    int currPhotoIndex = -1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +42,7 @@ public class InterestingPhotosActivity extends AppCompatActivity {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Fetching Next Photo", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
