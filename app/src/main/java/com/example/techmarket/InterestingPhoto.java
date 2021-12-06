@@ -12,4 +12,13 @@ public class InterestingPhoto {
         this.dateTaken = dateTaken;
         this.photoURL = photoURL;
     }
+    @Override
+    public String toString() {
+        return "InterestingPhoto{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", dateTaken='" + dateTaken + '\'' +
+                ", photoURL='" + photoURL + '\'' +
+                '}';
+    }
 }
