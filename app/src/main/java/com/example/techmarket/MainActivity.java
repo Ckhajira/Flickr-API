@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, AllProductsActivity.class);
+                Intent intent = new Intent(MainActivity.this, ChoiceActivity.class);
                 startActivity(intent);
 
             }
