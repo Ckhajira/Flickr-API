@@ -1,5 +1,7 @@
 package com.example.techmarket;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
@@ -24,9 +26,9 @@ public class FlickrAPI {
     static final String API_KEY = "465bc7a6758e44a8c075e91f4590f1f9";
     static final String TAG = "WebServicesFunTag";
 
-    MainActivity mainActivity;
-    public FlickrAPI(MainActivity mainActivity){
-        this.mainActivity = mainActivity;
+    InterestingPhotosActivity interestingPhotosActivity;
+    public FlickrAPI(InterestingPhotosActivity interestingPhotosActivity){
+        this.interestingPhotosActivity = interestingPhotosActivity;
     }
 
     public void fetchInterestingPhotos(){
@@ -66,7 +68,7 @@ public class FlickrAPI {
         protected void onPreExecute() {
             super.onPreExecute();
             //Executes on the main UI thread
-            ProgressBar progressBar = mainActivity.findViewById(R.id.progressBar);
+            ProgressBar progressBar = interestingPhotosActivity.findViewById(R.id.progressBar);
             progressBar.setVisibility(View.VISIBLE);
         }
 
@@ -140,10 +142,52 @@ public class FlickrAPI {
             super.onPostExecute(interestingPhotos);
 
             Log.d(TAG, "onPostExecute: " + interestingPhotos.size());
-            mainActivity.receivedInterestingPhotos(interestingPhotos);
+            interestingPhotosActivity.receivedInterestingPhotos(interestingPhotos);
 
-            ProgressBar progressBar = mainActivity.findViewById(R.id.progressBar);
+            ProgressBar progressBar = interestingPhotosActivity.findViewById(R.id.progressBar);
             progressBar.setVisibility(View.GONE);
+        }
+    }
+    //GS:added
+    public void fetchPhotoBitmap(String photoUrl){
+        PhotoRequestAsyncTask asyncTask = new PhotoRequestAsyncTask();
+        asyncTask.execute(photoUrl);
+    }
+    //GS:added
+    class PhotoRequestAsyncTask extends AsyncTask<String, Void, Bitmap>{
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            ProgressBar progressBar = (ProgressBar) interestingPhotosActivity.findViewById(R.id.progressBar);
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... strings) {
+            Bitmap bitmap = null;
+
+            try {
+                URL url = new URL(strings[0]);
+                HttpsURLConnection urlConnection = (HttpsURLConnection)
+                        url.openConnection();
+                InputStream in = urlConnection.getInputStream();
+                bitmap = BitmapFactory.decodeStream(in);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return bitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            super.onPostExecute(bitmap);
+            ProgressBar progressBar = (ProgressBar) interestingPhotosActivity.findViewById(R.id.progressBar);
+            progressBar.setVisibility(View.GONE);
+            interestingPhotosActivity.receivedPhotoBitmap(bitmap);
         }
     }
 
