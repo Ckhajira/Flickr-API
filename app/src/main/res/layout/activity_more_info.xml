@@ -32,5 +32,17 @@
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/black"
         android:text="Contact Us" />
+    <Button
+        android:id="@+id/goHomeBtnMoreInfo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/black"
+        android:text="Go Home"
+        android:layout_marginLeft="25dp"/>
 
 </RelativeLayout>

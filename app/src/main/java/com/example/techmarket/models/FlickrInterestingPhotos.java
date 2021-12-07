@@ -1,11 +1,11 @@
 
-package com.example.webservicesfun;
+package com.example.techmarket.models;
 
-import javax.annotation.Generated;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-@Generated("jsonschema2pojo")
+
 public class FlickrInterestingPhotos {
 
     @SerializedName("photos")
