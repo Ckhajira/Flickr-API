@@ -1,32 +1,46 @@
 ## Tech Market App
 
-This is an Android app that provides a marketplace for second hand electronic devices , 28/11/2021.
+This is an Android app that provides a marketplace for paintings and hard-copy photos , 07/12/2021.
 
 By Khajira Christopher
 
 ## Description
-This is a marketplace app that allows the user to purchase second hand elecronic devices. The site allows the user
-to login after which he gets a list of all available products. From the list of products, the user is able to select
-a product and view the details of the products. From the details, the user is provided with the option to buy the product.
+This is a marketplace app that allows the user to purchase paintings and hard-copy photos. The site allows the user
+to login after which he gets a list of all available paintings. From the list of paintings, the user is able to select
+a painting and view the details of the painting. From the details, the user is provided with the option to buy the product.
 He is then presented with the form for delivery which requires the name, address and phone number.
 
 
 ## Behaviour Driven Development
 1.  Displays Login Page
    - INPUT: "Fill the email and password form"
-   - OUTPUT: "User is directed to the products page"
-2.  Displays a list view with the list of the products
-   - INPUT: "Click on image to select a product"
-   - OUTPUT: "Redirected to the product details"
-3.  Displays product details of the product selected in the list view
-   - INPUT: "Button to Buy the product"
+   - OUTPUT: "User is directed to the choices page"
+   
+2.  Displays two buttons: button for MarketPlace and Button for Flickr Inspiration
+   - INPUT: "Market Place Button or Flickr Button"
+   - OUTPUT: "If Market Place Button": 
+   i) Displays a list view with the list of the paintings
+   - INPUT: "Click on image to select a painting"
+   - OUTPUT: "Redirected to the painting details"
+   ii)  Displays painting details of the painting selected in the list view
+   - INPUT: "Button to Buy the painting"
    - OUTPUT: "Redirected to the delivery form"
-4.  Displays delivery form
+   iii)  Displays delivery form
    - INPUT: "Name, address and phone number of the user"
    - OUTPUT: "Redirected to the success page"
-4.  Displays success page
+   iv) Displays success page
    - OUTPUT: "Thank you message to the user and a summary of the delivery information"
-
+   v) Displays About Us and More Info
+   - Input: "About Us Button"
+   - Output: "About Us Details"
+   vi) Displays MoreInfo
+   - Input: "More Info button"
+   - Output: "Website url that uses implicit intent to redirect user to an outside source"
+   
+3. Displays two buttons: button for MarketPlace and Button for Flickr Inspiration
+   - INPUT: "Market Place Button or Flickr Button"
+   - OUTPUT: "If Flickr Button"
+   i) Displays title, name and photo fetched from FLickr throgh Flick API. Next button goes to next photo
 
 ## Setup/Installation Requirements
 
