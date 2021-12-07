@@ -32,16 +32,8 @@ public class FlickrAPI {
     }
 
     public void fetchInterestingPhotos(){
-        //need a URL for the request
-        String url = constructInterestingPhotoListURL();
-        // Log.e(TAG, "fetchInterestingPhotos: " + url);
 
-        //start the background task to fetch the photos
-        //we have to use a background task
-        //Android will not let you do any network activity
-        //on the main UI thread
-        //define a subclass a AsyncTask
-        //asynchronous means doesn't wait/block
+        String url = constructInterestingPhotoListURL();
         FetchInterestingPhotoListAsyncTask asyncTask = new FetchInterestingPhotoListAsyncTask();
         asyncTask.execute(url);
     }
@@ -55,26 +47,18 @@ public class FlickrAPI {
         return url;
     }
     class FetchInterestingPhotoListAsyncTask extends AsyncTask<String, Void, List<InterestingPhoto>> {
-        //executes on the background thread
-        //CANNOT update the UI thread
-        //unless we are in the appropriate AsyncTask method
-        //this is where we do 3 things
-        //1. open the url request
-        //2.download the JSON response
-        //3.parse the JSON response in to InterestingPhoto objects
-
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //Executes on the main UI thread
+
             ProgressBar progressBar = interestingPhotosActivity.findViewById(R.id.progressBar);
             progressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
         protected List<InterestingPhoto> doInBackground(String... strings) {
-            //String... is called var args, treat it like an array
+
             String url = strings[0];
             List<InterestingPhoto> interestingPhotoList = new ArrayList<>();
 
@@ -82,10 +66,8 @@ public class FlickrAPI {
                 URL urlObject = new URL(url);
                 HttpsURLConnection urlConnection = (HttpsURLConnection) urlObject.openConnection();
 
-                //successfully opened url over Https protocol
-                //download the JSON response
+
                 String jsonResult ="";
-                //character by character we are going to build the json string from an input stream
                 InputStream in= urlConnection.getInputStream();
                 InputStreamReader reader = new InputStreamReader(in);
                 int data = reader.read();
@@ -95,14 +77,14 @@ public class FlickrAPI {
                 }
                 Log.d(TAG, "doInBackground: " + jsonResult);
 
-                //parse the JSON
+
                 JSONObject jsonObject = new JSONObject(jsonResult);
-                //grab the "root" photos jsonObject
-                JSONObject photosObject = jsonObject.getJSONObject("photos"); //photos is the key
-                JSONArray photoArray = photosObject.getJSONArray("photo");//photo is the key
+
+                JSONObject photosObject = jsonObject.getJSONObject("photos");
+                JSONArray photoArray = photosObject.getJSONArray("photo");
                 for (int i = 0; i<photoArray.length(); i++){
                     JSONObject singlePhotoObject = photoArray.getJSONObject(i);
-                    //try to parse a single photo's info
+
                     InterestingPhoto interestingPhoto = parseInterestingPhoto(singlePhotoObject);
                     if(interestingPhoto != null){
                         interestingPhotoList.add(interestingPhoto);
@@ -130,8 +112,7 @@ public class FlickrAPI {
                 interestingPhoto = new InterestingPhoto(id, title,dateTaken,photoURL);
             }
             catch (JSONException e){
-                //print out the stack trace and/or try to request a different url..
-                //do nothing
+
             }
             return interestingPhoto;
 
