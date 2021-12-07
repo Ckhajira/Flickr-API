@@ -63,7 +63,7 @@ public class InterestingPhotosActivity extends AppCompatActivity {
                 nextPhoto();
             }
         });
-        FlickrAPI flickrAPI = new FlickrAPI(this);
+        PaintingActivity flickrAPI = new PaintingActivity(this);
         flickrAPI.fetchInterestingPhotos();
     }
 
@@ -85,7 +85,8 @@ public class InterestingPhotosActivity extends AppCompatActivity {
 
             //TODO: come back and add support to fetch the source image
             //using interestingPhoto.getPhotoURL()
-            FlickrAPI flickrAPI = new FlickrAPI(this);
+
+            PaintingActivity flickrAPI = new PaintingActivity(this);
             flickrAPI.fetchPhotoBitmap(interestingPhoto.getPhotoURL());
 
         }

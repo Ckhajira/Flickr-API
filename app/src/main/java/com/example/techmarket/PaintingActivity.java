@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
+import com.example.techmarket.Constants.*;
 
-public class FlickrAPI {
-    static final String BASE_URL = "https://api.flickr.com/services/rest";
-    static final String API_KEY = "465bc7a6758e44a8c075e91f4590f1f9";
+public class PaintingActivity {
+
     static final String TAG = "WebServicesFunTag";
 
     InterestingPhotosActivity interestingPhotosActivity;
-    public FlickrAPI(InterestingPhotosActivity interestingPhotosActivity){
+    public PaintingActivity(InterestingPhotosActivity interestingPhotosActivity){
         this.interestingPhotosActivity = interestingPhotosActivity;
     }
 
@@ -38,9 +38,9 @@ public class FlickrAPI {
         asyncTask.execute(url);
     }
     public String constructInterestingPhotoListURL(){
-        String url =BASE_URL;
+        String url ="https://api.flickr.com/services/rest";
         url += "?method=flickr.interestingness.getList";
-        url += "&api_key=" + API_KEY;
+        url += "&api_key=" + "465bc7a6758e44a8c075e91f4590f1f9";
         url += "&format=json";
         url += "&nojsoncallback=1";
         url += "&extras=date_taken,url_h";
