@@ -1,4 +1,6 @@
-package com.example.techmarket;
+package com.example.techmarket.network;
+
+import com.example.techmarket.Constants;
 
 import java.io.IOException;
 

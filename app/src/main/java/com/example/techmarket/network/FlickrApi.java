@@ -1,4 +1,6 @@
-package com.example.techmarket;
+package com.example.techmarket.network;
+
+import com.example.techmarket.ui.InterestingPhotosActivity;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

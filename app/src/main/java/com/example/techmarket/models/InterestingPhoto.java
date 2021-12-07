@@ -1,4 +1,4 @@
-package com.example.techmarket;
+package com.example.techmarket.models;
 
 public class InterestingPhoto {
     String id;

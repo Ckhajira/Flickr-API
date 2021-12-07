@@ -1,4 +1,4 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.techmarket.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

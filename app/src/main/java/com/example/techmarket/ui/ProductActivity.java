@@ -1,4 +1,4 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
+import com.example.techmarket.R;
+import com.example.techmarket.models.Product;
 
 public class ProductActivity extends AppCompatActivity {
 

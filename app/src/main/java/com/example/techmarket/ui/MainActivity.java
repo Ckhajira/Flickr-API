@@ -1,14 +1,15 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 import android.content.Intent;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import butterknife.ButterKnife;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.techmarket.R;
 
 import butterknife.BindView;
 

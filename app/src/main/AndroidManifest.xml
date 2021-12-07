@@ -12,30 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMarket">
         <activity
-            android:name=".MoreInfoActivity"
+            android:name=".ui.MoreInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".InterestingPhotosActivity"
+            android:name=".ui.InterestingPhotosActivity"
             android:exported="false"
             android:label="@string/title_activity_interesting_photos"
             android:theme="@style/Theme.TechMarket.NoActionBar" />
         <activity
-            android:name=".ChoiceActivity"
+            android:name=".ui.ChoiceActivity"
             android:exported="false" />
         <activity
-            android:name=".SuccessActivity"
+            android:name=".ui.SuccessActivity"
             android:exported="false" />
         <activity
-            android:name=".BuyFormActivity"
+            android:name=".ui.BuyFormActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductActivity"
+            android:name=".ui.ProductActivity"
             android:exported="false" />
         <activity
-            android:name=".AllProductsActivity"
+            android:name=".ui.AllProductsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.techmarket.R;
 
 
 public class AboutUsFragment extends Fragment {

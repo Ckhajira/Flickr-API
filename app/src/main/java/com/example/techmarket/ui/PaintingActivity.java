@@ -1,4 +1,4 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,7 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
-import com.example.techmarket.Constants.*;
+
+import com.example.techmarket.R;
+import com.example.techmarket.models.InterestingPhoto;
 
 public class PaintingActivity {
 

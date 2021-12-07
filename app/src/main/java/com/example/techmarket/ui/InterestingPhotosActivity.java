@@ -1,9 +1,11 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
+import com.example.techmarket.R;
+import com.example.techmarket.models.InterestingPhoto;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.example.techmarket.databinding.ActivityInterestingPhotosBinding;
 

@@ -1,13 +1,14 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+
+import com.example.techmarket.ProductRecViewAdapter;
+import com.example.techmarket.R;
+import com.example.techmarket.models.Product;
 
 import java.util.ArrayList;
 

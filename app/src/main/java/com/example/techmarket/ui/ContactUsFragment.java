@@ -1,4 +1,4 @@
-package com.example.techmarket;
+package com.example.techmarket.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.techmarket.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
